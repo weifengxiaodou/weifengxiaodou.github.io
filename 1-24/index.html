@@ -8,12 +8,81 @@
 
     <!-- This is a script file -->
     <script>
+     
         var num=10;
         var name="ARTG"; 
 
         // print command: diaplaying /printing the value of num
+        console.log(num);
 
-    console.log(num);
+
+
+
+        // boolean values: True or False, Yes or No, 1 or no
+        //let's check if num is bigger than another value
+        var isBigger = num>100; 
+
+        console.log(isBigger); 
+
+//Array type
+//initialize an array called users, which has 4 items
+//Array data types are 0-indexed
+var users=["Northeastern",10,"ARTG",100];
+console.log(users[1]);
+
+
+
+//add a function within the object
+//this object consists of key:value pairs
+//object can contain functions
+var newObject ={
+    name:"Hasting Building",
+    color:"Green",
+    street:"Huntington Ave",
+    zip:53719, 
+    greetings:function(name){
+        console.log("morning"+name)
+    }
+}
+
+console.log(newObject.zip);
+
+
+//Different types of functions
+
+//a function without an input variable
+var printHello = function(){
+    console.log("Hello world");
+}
+
+printHello();
+
+
+
+//function with a string input
+var printName=function(name){
+    console.log("Hello"+name);
+}
+
+printName("Sir")
+
+
+//function with a numerical return value
+var addValue = function(val1,val2){
+    let sum=val1+val2
+    return sum;
+}
+
+    
+
+
+
+
+
+
+
+
+
 
     </script>
 
