@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+
+<body>
+    <script>
+
+        //create variables
+        var firstname="Melody";
+        var lastname="Hou";
+        var fullname=firstname + lastname
+        document.write(fullname);
+
+        var word_length=fullname.length;
+        document.write("This is length"+word_length)
+
+        var result=fullname.substring(3,5);
+        document.write("This is result" + result);
+        
+        //create Array
+        // "new" is a keyword, don't really understand
+        var a =new Array("cat","dog","rabbit",52,35.6);
+        document.write(a[1]);
+
+
+        //caculation in JS
+        var num1=55;
+        var num2=79;
+
+        var total=num1++;
+
+        document.write("This is total" + total);
+        document.write("This is num1"+num1);
+
+
+        //create a function
+        function sayHello(){
+            document.write("Hello");
+        }
+        //call the function
+        sayHello();
+
+
+
+
+        //create a function with an input
+        function sayGoodbye(who){
+            document.write("Bye," + who);
+        }
+        //call the function
+        sayGoodbye("Alex");
+        document.write("<br>");
+        sayGoodbye("Ben");
+
+        document.write("<br>");
+        document.write("<br>");
+
+        //flow control
+        //if statement
+        // var a=7;
+        //     if(a>10){
+        //         alert("a is bigger than 10");
+        //     } else{
+        //         alert("a is smaller or equally to 10");
+        //     }
+
+        
+        
+        document.write("<br>");
+
+        //for loop
+        for(i=0;i<5;i++){
+            document.write("This is iteration"+i+"<br>");
+        }
+        
+
+
+
+
+    </script>
+ 
+
+
+
+
+</body>
+
+
+
+</html>

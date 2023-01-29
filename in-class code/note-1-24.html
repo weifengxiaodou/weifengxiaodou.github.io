@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=”utf-8” />
+    <title>JavaScript</title>
+
+
+    <!-- This is a script file -->
+    <!-- in-class code(not complete) -->
+    <!-- in-class code(not complete) -->
+    <!-- in-class code(not complete) -->
+
+    <script>
+     
+        var num=15.2;
+        var name="ARTG"; 
+        var date="January 28";
+
+        // print command: diaplaying /printing the value of num
+        console.log(num);
+        console.log(name);
+        console.log(date);
+
+
+
+
+        // boolean values: True or False, Yes or No, 1 or 0
+        //let's check if num is bigger than another value
+        var isBigger = num<100; 
+        console.log(isBigger); 
+
+      
+
+//Array type
+//initialize an array called “users”, which has 4 items
+//Array data types are 0-indexed
+var users=["Northeastern",10,"ARTG",100];
+console.log(users[0]);
+
+
+
+//add a function within the object
+//this object consists of key:value pairs （object is like dictionary in Python) 
+//object can contain functions
+var newObject ={
+    name:"Hasting Building",
+    color:"Green",
+    street:"Huntington Ave",
+    zip:53719, 
+    // greetings:function(name){
+    //     console.log("morning"+name)
+    }
+
+console.log(newObject.street);
+
+
+
+
+var foodList={
+    protein:"beef",
+    vege:"tomato",
+    rice:"brown rice",
+    fruit:"pear",
+}
+
+console.log(foodList);
+console.log(foodList.protein);
+// console.log(foodList[1]);  seems we can't call a pair in the object like the way to call an item in an array
+
+
+
+
+
+
+//Different types of functions
+
+//a function without an input variable
+var printHello = function(){
+    console.log("Hello Melody");
+}
+
+printHello();
+
+
+
+//function with a string input
+var printName=function(name){
+    console.log("Hello"+name);
+}
+
+printName("Susan");
+
+
+//function with a numerical return value
+//problem: no response 
+//problem: no response 
+var addValue = function(val1,val2){
+    let sum=val1+val2;
+    return sum;
+}
+
+
+
+//conditional statement are if/else statement
+//problem: no response 
+//problem: no response 
+
+var conVal =500;
+if (conVal <=10){
+    console.log("This is good.");
+}else if(conVal=15){
+    console.log("This is bad");
+}else{
+    console.log("I don't know what to do");
+}
+
+//combine function with conditional statement 
+// var greaterThanTen = function(val){
+//     if (val>10){
+//         console.log("Yes");
+//     }else if (val==10){
+//         console.log("No");
+//     }else{
+//         val++;
+//     } 
+//     console.log(val);
+//     return val;
+    //cannot write anything after "return" 
+// }
+
+// var checker=greaterThanTen(100);
+// console.log(checker);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</head>
+
+
+
+<body>
+
+<div>
+<h1 id="HL">Hello, World!></h1>
+
+</div>
+
+<script>
+    document.getElementById("HL").innerHTML="changed content";
+    document.getElementById("HL").style.color="orange"
+
+    //might be usefull for homework
+
+</script>
+
+
+</body>
+
+
+
+
+
+
+</html>
