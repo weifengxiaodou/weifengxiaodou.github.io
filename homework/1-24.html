@@ -37,7 +37,7 @@
 
 <body>
 
-<h1>Howework-Jan.24</h1>
+<h1 id="headline">Howework-Jan.24</h1>
 
 <h2>Want to have something fun?</h2>
 
@@ -53,6 +53,17 @@
     }
 
 </script>
+
+
+
+<!-- use getElementById to replace things  -->
+    <button class="button button1" onclick="replaceText()">Replace headline text</button>
+
+    <script>
+    function replaceText(){
+        document.getElementById("headline").innerHTML="This is a new headline";
+    }
+    </script>
 
 
 </body>

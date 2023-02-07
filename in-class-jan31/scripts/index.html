@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8" />
+
+    <!-- Loads an external JS file -->
+    <!-- wrong link name -->
+    <!-- <script src="/in-class-jan31/scripts/myFunctions.js"></script> -->
+
+    <!-- Loads an external JS file -->
+    <!-- right link name -->
+    <!-- index and myFunction are in the same folder, so the link is the name -->
+    <script src="myFunctions.js"></script>
+
+
+    <!-- without this code, we cannot run d3  -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+
+    <!-- in the same file, "../" means going back to the folder and go to the css file -->
+    <link rel="stylesheet" href="../style31.css">
+
+
+</head>
+
+
+<body>
+
+
+        <!-- PART A -->
+        <!-- PART A -->
+        <!-- Uses the functions defined in myFunctions.js--> 
+
+
+        <script>
+          var sm = sumAB(2, 5);
+          console.log(sm);
+      </script>
+  
+  
+      <script>
+        console.log("The sum is: " + sumAB(1, 2));
+        console.log("Here is a random number: " + randomPosition());
+      </script>
+
+
+
+
+
+    <!-- used for d3 change multiple svg files -->
+     <!-- used for d3 change multiple svg files -->
+      <!-- used for d3 change multiple svg files -->
+    <div>
+        <svg width="700" height="200" id="static-circles">
+            <rect width="700" height="200" style="fill:blue" />
+
+            <circle cx="50" />
+            <circle cx="120" style="fill:red" />
+            <circle cx="240" />
+            <circle cx="360" />
+            <circle cx="480" />
+
+        </svg>
+        <p style="font-family:verdana; color: blueviolet;">text under the circle</p>
+    </div> -->
+
+
+
+
+
+
+
+
+        <!-- PART B -->
+        <!-- PART B -->
+        <!-- Basic D3.js functions: Selections, Changing attributes and styles, Multi-Selection -->
+
+        <!-- This is a set of helper p tags that are used below to illustrate
+        how d3 can change multiple HTML elements at the same time. -->
+
+
+
+        <p style="font-family:verdana;color: blueviolet;">text not in div</p>
+
+
+        <div>
+          <h1 id="HL">Here are JS Libraries, <br> D3.js and Data Manipulstion</h1>
+      </div> -->
+  
+  
+      <p>This is an illustration </p>
+      <p>the D3 function</p>
+      <p>.selectAll for changing multiple elements</p>
+
+
+    <script>
+        var page_title = d3.select("#HL");
+
+        //change individual element styles
+        //(attribute, value)
+        page_title.style("color", "blue");
+
+        //multiple changes one after the other
+        page_title.style("color","green")
+                  .style("background-color","pink");
+
+        //changing element attribute
+        //assign a new class
+        page_title.attr("class", "comicText");
+
+
+        //change multiple element styles or attributes
+        d3.selectAll("p").style("text-aligh", "center")
+            .attr("class", "comicText");
+
+//Question: the "p" refers to all <p> or is an ID? 
+
+
+
+
+            
+
+    //illustrate how to change multiple svg files
+    d3.selectAll("circle")
+    .style("fill","red")
+    .attr("cy","50")
+    .attr("r","30");
+
+    </script>
+
+
+
+<!-- <div>
+    <button onclick=""
+</div> -->
+
+
+<script>
+    var data1=[
+        {
+            country:"usa",
+            value:12345
+        },
+        {
+            country:"mex",
+            value:3456
+        }
+    ];
+
+    var data2=[
+        {
+            country:"chn",
+            value:5678
+        },
+        {country:"mex",
+        value:789
+        }
+    ]
+
+        var data3=[
+            {country:"chn",
+            value:598
+        },
+        {country:"mex",
+        value:789
+        },
+        {
+            country:"usa",
+            value:12345
+        },
+        ]
+
+        //function that draws circles using data arrays
+        function drawCircles(dataArray){
+            var circles=d3.select("#data-viz")
+
+        }
+
+        //entering circles
+        circles.enter().append("circle")
+        .attr("cy","100")
+        .attr("cx",randomPosition)
+        .attr("r","0")
+        .transition().duration(1000)
+        .attr
+
+
+
+
+</script>
+
+
+
+</body>
+
+</html>

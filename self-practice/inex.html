@@ -2,48 +2,79 @@
 <html>
 
 <head>
+    <meta charset="utf-8" />
 
-<style>
-#myHeader{
-    background-color:bisque;
-    color:blueviolet;
-    text-align:center;
-    padding: 40px;
-}
+    <style>
+    #myHeader{
+        background-color:bisque;
+        color:blueviolet;
+        text-align:center;
+        padding: 40px;
+    }
 
-</style>
+    </style>
+
+<script src="//d3js.org/d3.v4.js"></script>
 
 </head>
 
 
 <body>
 
-<h2 id="myHeader">the style of my header</h2>
+    <h2 id="myHeader">the style of my header</h2>
 
-<p id="myHeader">a paragraph in the style of my header</p>
+    <p id="myHeader">a paragraph in the style of my header</p>
+
+    <!-- bug here: the button doesn't work -->
+    <p id="demo">JavaScript can change HTML content.</p>
+    <button type="button" onclick='document.getElementById("demo").innterHTML="Good Morning!"'>Click Me</button>
+        
+
+    <!-- Using document.write() after an HTML document is loaded, will delete all existing HTML: -->
+    <!-- it seems it works when document.write is in a function or in a button, but items will not disappear if using document.write to print -->
+
+    <!-- <h2>Will this line disappear?</h2>
+    <button type="button" onclick="document.write(11)">Try it</button> -->
+    
 
 
 
     <script>
 
+
+// <button type="button" onclick='document.getElementById("demo").innterHTML="Hello JavaScript!"'>Click Me</button>;
+
+
+
+    document.write("<br>");
+
         //create variables
+        //document.write is like print in Python
+
         var firstname="Melody";
         var lastname="Hou";
-        var fullname=firstname + lastname
+        var fullname=firstname + lastname;
         document.write(fullname);
 
-        var word_length=fullname.length;
-        document.write("This is length"+word_length)
 
-        var result=fullname.substring(3,5);
-        document.write("This is result" + result);
-        
+    document.write("<br>");
+        // var word_length=fullname.length;
+        // document.write("The length is"+word_length);
+        document.write(fullname.length);
+
+
+    document.write("<br>");
+        document.write(fullname.substring(3,5));
+
+
+    document.write("<br>");
         //create Array
         // "new" is a keyword, don't really understand
         var a =new Array("cat","dog","rabbit",52,35.6);
         document.write(a[1]);
 
 
+    document.write("<br>");
         //caculation in JS
         var num1=55;
         var num2=79;
@@ -54,27 +85,44 @@
         document.write("This is num1"+num1);
 
 
+    document.write("<br>");
         //create a function
         function sayHello(){
-            document.write("Hello");
+            document.write("Hello Isabel");
         }
         //call the function
         sayHello();
 
 
 
-
+    document.write("<br>");
         //create a function with an input
         function sayGoodbye(who){
             document.write("Bye," + who);
         }
         //call the function
-        sayGoodbye("Alex");
+        sayGoodbye("2022");
         document.write("<br>");
-        sayGoodbye("Ben");
+
+
+
+        function bestWishes(festival){
+            document.write("Happy "+festival);
+        }
+        bestWishes("Valentine's Day");
+        document.write("<br>");
+        bestWishes("Easter");
+        document.write("<br>");
+        bestWishes("Friday");
+        
 
         document.write("<br>");
         document.write("<br>");
+
+
+
+
+
 
         //flow control
         //if statement
@@ -95,10 +143,24 @@
         }
         
 
-
-
-
     </script>
+
+
+
+
+<!-- practice d3 -->
+<!-- practice d3 -->
+
+
+
+<p id="quote" style="color:orangered;">Stay Hungry, Stay Foolish </p>
+
+<script>
+    var quoteText = d3.select("#quote");
+    quoteText.style("color","orange");
+    //bug 
+
+</script>
  
 
 
