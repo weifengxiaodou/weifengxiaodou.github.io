@@ -72,6 +72,8 @@ d3.csv("./data/gapminder.csv").then(function(data) {
         .append("svg")
         .attr("width", width)
         .attr("height", height);
+        d3.select("#chart").transition()
+    .style("background-color", "#F5F5F5");
 
 
     /* 
@@ -135,6 +137,8 @@ d3.csv("./data/gapminder.csv").then(function(data) {
     });
 
 
+
+
     /*
     3. DETERMINE MIN AND MAX VALUES OF VARIABLES
 
@@ -172,7 +176,7 @@ d3.csv("./data/gapminder.csv").then(function(data) {
 
         - Why is there a plus sign (+) in front of d.lifeExp?
 
-        See above answer.
+
 
     */
 
