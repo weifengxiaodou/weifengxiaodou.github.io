@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>HTML basic practice</title>
+<link rel="stylesheet" href="style.css">
+
+
+<!-- <style>
+   body{text-align: center;} 
+   h1{color:red;}
+   p{color:blue;}
+</style> -->
+
+<style>
+h2{
+    border:2px solid powderblue;
+    padding:30px;
+    margin:30px;
+}
+
+img{
+    width:100%;
+}
+
+.note{
+    font-size:120%;
+    border: 2px solid black;
+}
+
+
+.title{
+    background-color: aqua;
+}
+</style>
+
+
+<style>
+    #myHeader{
+        background-color: lightblue;
+        color:lightcoral;
+        text-align: right;
+    }
+</style>
+
+
+
+
+
+</head>
+
+
+<body>
+    <h1 style="color:red" title="I'm a header">Happy New Year</h1>
+    <img src="https://img.freepik.com/free-photo/new-year-banner-with-fireworks_23-2149539970.jpg?w=2000" alt="new year" width="200" height="142">
+    <br>
+    <a href="https://www.yunjiahou.com/">This is the link to my portfolio (open in the same window)</a>
+    <br>
+    <a href="https://www.yunjiahou.com/" target="_blank">Link to my portfolio (open in a new tab)</a>
+    <hr>
+    
+    <!-- file path -->
+    <p>The "xiaodou.png" file is located in the image folder in the current folder</p>
+    <img src="image/xiaodou.png" alt="yellow pea logo" height="200" width="142" title="I'm an image using width and height tag">
+    <br> 
+    <img src="image/xiaodou.png" alt="yellow pea logo" style="height: 200px; width:142px;">
+    <p>The "forest.jpg" file is located in the same folder as the current page</p>
+    <img src="forest.jpg" alt="forest picture" style="height:142px; width:142px;">
+    <br>
+    <img src="/homework/picture/billionaires.jpg" alt="billionaires picture">
+    <br>
+    <img src="../color-scheme.png" alt="color scheme" style="height:142px; width:142px;">
+
+
+    <p title="I'm a paragraph">If we try to display an image that does not exist, the value of the alt attribute will be displayed instead. </p>
+    <img src="image/typo.png" alt="yellow pea logo"> 
+    <h2 style="text-align:left; color:green; font-family:verdana;">Happy Saint Patrick's Day</h2>
+    <p><b>This paragraph is bold</b></p>
+    <p><strong>This paragraph is strong</strong></p>
+    <p><i>This paragraph is italic</i></p>
+    <hr>
+    <h1 style="color:aliceblue; background-color:rgba(255,99,71,0.5); border:2px solid violet;">Manipulate colors in HTML</h1>
+    <p>The image below is a link</p>
+
+
+    <div style="background-color: black; color:white; padding:20px; margin:20px; text-align:center;">
+        <h3>Hello Malden!</h2>
+        <p>We moved to Malden yesterday. Life is convinent in this neighborhood with a lot of restaurants and grocery stores.</p>
+    </div>
+    <hr>
+
+    <h1><span class="note title">Pumas</span> at large</h1>
+    <p><span class="note">Pumas</span> are large, cat-like animals which are found in America.</p>
+    <hr>
+
+    <h3 id="myHeader">Raining right now</h3>
+
+    <!-- <h3 id="myHeader"> Another my header ID</h1> -->
+    <!-- there might be some problems -->
+    <hr>
+
+    <button type="button" onclick="myFunction()">Click me</button>
+    <p id="demo">This is a demonstration.</p>
+    <script>
+        function myFunction(){
+            document.getElementById("demo").innerHTML="Hello JavaScript";
+            document.getElementById("demo").style.color="orange"; 
+            document.getElementById("demo").style.backgroundColor="green";
+        }
+    </script>
+
+
+
+
+</body>
+
+
+
+</html>
+
+
+
+<!-- note: viewpoint canvas;   -->

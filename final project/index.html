@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <title>Final Project: American Time Use</title>
+        <!-- <link rel="stylesheet" href="style/style.css"> -->
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+
+        <style>
+            * {
+              box-sizing: border-box;
+            }
+            
+            body {
+              font-family: Helvetica, sans-serif;
+              padding: 10px;
+              background: #f1f1f1;
+            }
+            
+            .header {
+              padding: 30px;
+              text-align: left;
+              background: white;
+            }
+            
+            .header h2 {
+              font-size: 30px;
+            }
+            
+            /* navigation bar */
+            .topnav {
+              overflow: hidden;
+              background-color: #333;
+            }
+            
+            /* top navigation links */
+            .topnav a {
+              float: left;
+              display: block;
+              color: #f2f2f2;
+              text-align: center;
+              padding: 14px 16px;
+              text-decoration: none;
+            }
+            
+            /* navigation bar link hover */
+            .topnav a:hover {
+              background-color: #ddd;
+              color: black;
+            }
+            
+            
+            /* Left column */
+            .maincontent {   
+              float: left;
+              /* width: 75%; */
+            }
+            
+            /* Right column */
+            /* .rightcolumn {
+              float: left;
+              width: 25%;
+              background-color: #f1f1f1;
+              padding-left: 20px;
+            } */
+            
+            /* Placeholder image */
+            .fakeimg {
+              background-color: #aaa;
+              width: 100%;
+              padding: 20px;
+            }
+            
+            /* Add a card effect for articles */
+            .card {
+              background-color: white;
+              padding: 20px;
+              margin-top: 20px;
+            }
+            
+            /* Clear floats after the columns */
+            .row::after {
+              content: "";
+              display: table;
+              clear: both;
+            }
+            
+            /* Footer */
+            .footer {
+              padding: 20px;
+              text-align: left;
+              background:white;
+              margin-top: 20px;
+            }
+
+
+            /* Footer-Comment */
+            input[type=text], select {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+                }
+
+                input[type=publish] {
+                width: 100%;
+                background-color: black;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                }
+
+                input[type=publish]:hover {
+                background-color: #ddd;
+                }
+
+
+
+
+            
+            /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+            @media screen and (max-width: 800px) {
+              .maincontent, .rightcolumn {   
+                width: 100%;
+                padding: 0;
+              }
+            }
+            
+            /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+            @media screen and (max-width: 400px) {
+              .topnav a {
+                float: none;
+                width: 100%;
+              }
+            }
+            </style>
+
+    </head>
+
+    <body>
+        <script src="./script/script.js"></script>
+
+        <div class="header">
+            <h2>Yunjia Hou</h2>
+            <p>Designer + Reporter</p>
+          </div>
+          
+          <div class="topnav">
+            <a href="#">Home</a>
+            <a href="#">Design</a>
+            <a href="#">Photography</a>
+            <a href="#">Writing</a>
+            <a href="#">About</a>
+          </div>
+          
+          <div class="row">
+            <div class="maincontent">
+              <div class="card">
+                <h1>Making Time For Kids</h1>
+                <h3>How raising kids has influenced American time use?</h3>
+                <div class="fakeimg" style="height:200px;">Infographic 1</div>
+                <p>Description for infographic 1..</p>
+                <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+              
+                <div class="fakeimg" style="height:200px;">Infographic 2</div>
+                <p>Description for infographic 2..</p>
+                <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+            
+                <div class="fakeimg" style="height:200px;">Infographic 3</div>
+                <p>Description for infographic 3..</p>
+                <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+            
+                 <div class="fakeimg" style="height:200px;">Infographic 4</div>
+                <p>Description for infographic 4..</p>
+                <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+            </div>
+          </div>
+          
+          <hr>
+
+          <div class="footer">
+            <h2>Footer</h2>
+
+            <!-- Comment bar -->
+            <div>
+              <form action="/action_page.php">
+                <input type="text" id="fname" name="firstname" placeholder="Write a comment">
+                <input type="publish" value="Publish">
+              </form>
+            </div>
+
+
+            <!-- social media buttons -->
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+
+
+    
+          </div>
+
+
+
+    </body>
+    
+</html>
